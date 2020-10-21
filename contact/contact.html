@@ -1,0 +1,112 @@
+<!--
+  Author : Unknown Ripper
+  Url : https://fadhilsaheer.github.io/web/
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Unknown Community</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper-->
+	<div id="wrapper">
+
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+			<a href="./join.html" class="icon solid fa-id-card"><span>Join</span></a>
+			<a href="../home.html" class="icon solid fa-home"><span>Home</span></a>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+
+			<!-- Contact -->
+			<article id="contact" class="panel">
+				<header>
+					<h2>Connect Us</h2>
+				</header>
+				<form action="" id="submit-form">
+					<div>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<input type="text" name="name" placeholder="Name" />
+							</div>
+							<div class="col-6 col-12-medium">
+								<input type="text" name="email" placeholder="Email" />
+							</div>
+							<div class="col-12">
+								<textarea name="message" placeholder="Message" rows="6"></textarea>
+							</div>
+							<div class="col-12">
+								<input type="submit" value="Send Message" />
+							</div>
+						</div>
+					</div>
+				</form>
+			</article>
+
+
+
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<ul class="copyright">
+				<li>&copy; Unknown Community
+				</li>
+				<li>Developed By <a href="https://fadhilsaheer.github.io/web/">Unknown</a></li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<script>
+
+		$("#submit-form").submit((e) => {
+			e.preventDefault()
+			$.ajax({
+				url: "https://script.google.com/macros/s/AKfycbxopqOdyC6sv50HjS54wngaaPk1ZllAahxTeOX1/exec",
+				data: $("#submit-form").serialize(),
+				method: "post",
+				success: function (response) {
+					swal("For Submitted Successfully!", "the form you filled just now is sended to Unknown Community", "success");
+					function vent(){
+						window.location.href = "../home.html";
+					}
+					setTimeout(vent, 2000);
+				},
+				error: function (err) {
+					swal("Something Went Wrong!", "the form you filled just now can't send it to Unknown Community", "error");
+
+				}
+			})
+		})
+
+
+	</script>
+
+
+</body>
+
+</html>
