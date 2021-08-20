@@ -12,12 +12,3 @@ Bootrap
 ```bash
 Sass
 ```
-
-## Developer
-
-```python
-Developer - Fadhil
-Instagram - __fadhil_m_
-E-mail - fadhilsaheer@gmail.com
-Github - fadhilsaheer
-```
